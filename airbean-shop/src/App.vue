@@ -12,14 +12,17 @@
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  background-color: #F3E4E1;
+  color: #2F2926;
+  width: 375px;
+  height: 839px;
+  display: grid;
+  justify-content: center;
 }
 
 #nav {
-  padding: 30px;
+  padding: 20px;
 }
 
 #nav a {
@@ -29,5 +32,10 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+body{
+  display: flex;
+  justify-content: center;
 }
 </style>
