@@ -1,6 +1,5 @@
 <template>
-  <div>
-      <h1>Meny</h1>
+  <div class="container">
       <Meny/>
   </div>
 </template>
@@ -15,8 +14,16 @@ export default {
 </script>
 
 <style>
-body{
-  color: white;
+
+
+h2, h3{
+  font-size: 23px;
 }
 
 </style>
+
+//theme colors
+// brown #2F2926
+// dark green #0E927D
+// pink #F3E4E1
+// orange #E5674E

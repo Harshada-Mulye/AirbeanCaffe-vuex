@@ -32,7 +32,7 @@ export default new Vuex.Store({
             },
             {
               id:5,
-              name:"Kaffe LAtte ",
+              name:"Kaffe Latte ",
               price:49,
               desc:"Bryggd på månadens bönor"
               },   
