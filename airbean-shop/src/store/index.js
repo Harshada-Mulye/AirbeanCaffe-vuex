@@ -42,14 +42,22 @@ export default new Vuex.Store({
                 price:39,
                 desc:"Bryggd på månadens bönor"
                 }
-    ]
+    ],
+    Order:[]
+    
   },
   getters:{
     kaffe:state=>{
     return state.kaffe;
-    }
+    },
+    order:state=>{
+      return state.Order;
+      }
   },
   mutations: {
+    Add_Order(state,payload){
+      state.Order.push(payload)
+    }
   },
   actions: {
   },
