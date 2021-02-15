@@ -39,6 +39,10 @@ console.log('Total ', this.priceTotal)
 }
 </script>
 
-<style>
-
+<style >
+.kaffestyle{
+    display:flex;
+    justify-content: space-between;
+    
+}
 </style>
