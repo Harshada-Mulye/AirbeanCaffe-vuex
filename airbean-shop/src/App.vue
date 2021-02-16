@@ -2,11 +2,11 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>|
+      <router-link to="/OurCoffee">Vårt Kaffe</router-link>|
       <router-link to="/KaffeMeny">KaffeMeny</router-link>|
       <router-link to="/Order">Your Order</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
@@ -14,10 +14,10 @@
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
-  background-color: #F3E4E1;
-  color: #2F2926;
+  background-color: #f3e4e1;
+  color: #2f2926;
   width: 375px;
-  height: 839px;
+  /* height: 839px; */
   display: grid;
   justify-content: center;
 }
@@ -35,7 +35,7 @@
   color: #42b983;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
 }
