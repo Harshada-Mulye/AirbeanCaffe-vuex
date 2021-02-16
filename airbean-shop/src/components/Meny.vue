@@ -1,7 +1,7 @@
 <template>
   <div>
       <h1>Meny component</h1>
-       <div v-for ="k in kaffe" :key=k.id  class="kaffestyle">
+       <div v-for ="k in abc" :key=k.id  class="kaffestyle">
            <button @click="AddItems(k)">+</button>
           <h2>
               {{k.name}}
@@ -19,8 +19,9 @@
 
 <script>
 export default {
+  
 computed:{
-        kaffe()
+        abc()
         {
             return this.$store.getters.kaffe;
         }

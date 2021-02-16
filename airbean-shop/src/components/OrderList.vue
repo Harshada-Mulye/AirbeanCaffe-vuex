@@ -1,7 +1,7 @@
 <template>
   <div>
       <h1>Your Order</h1>
-       <div v-for ="k in order" :key=k.id  class="kaffestyle">
+       <div v-for ="(k,index) in order" :key=index  class="kaffestyle">
            
           <h2>
               {{k.name}}
