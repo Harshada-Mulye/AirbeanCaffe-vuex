@@ -10,37 +10,43 @@ export default new Vuex.Store({
       id:1,
       name:"BryggKaffe",
       price:49,
-      desc:"Bryggd på månadens bönor"
+      desc:"Bryggd på månadens bönor",
+      amount:1
       },
       {
         id:2,
         name:"Caffe Dopio",
         price:49,
-        desc:"Bryggd på månadens bönor"
+        desc:"Bryggd på månadens bönor",
+        amount:1
         },
       {
           id:3,
           name:"Cappucino",
           price:49,
-          desc:"Bryggd på månadens bönor"
+          desc:"Bryggd på månadens bönor",
+          amount:1
           },
           {
             id:4,
             name:"Latte Machiato ",
             price:49,
-            desc:"Bryggd på månadens bönor"
+            desc:"Bryggd på månadens bönor",
+            amount:1
             },
             {
               id:5,
               name:"Kaffe Latte ",
               price:49,
-              desc:"Bryggd på månadens bönor"
+              desc:"Bryggd på månadens bönor",
+              amount:1
               },   
               {
                 id:6,
                 name:"Cortado ",
                 price:39,
-                desc:"Bryggd på månadens bönor"
+                desc:"Bryggd på månadens bönor",
+                amount:1
                 }
     ],
     Order:[]
@@ -56,7 +62,14 @@ export default new Vuex.Store({
   },
   mutations: {
     Add_Order(state,payload){
+      let nameObj = state.Order.find(element => element.name == payload.name)
+      if(nameObj){ 
+       nameObj.amount += 1
+        }
+        else{
+      
       state.Order.push(payload)
+        }
     }
   },
   actions: {
