@@ -18,6 +18,7 @@
          </div>
       </div>
     Total: {{sum}} {{priceTotal}}
+    <button>Take My Money</button>
   </div>
 </template>
 
