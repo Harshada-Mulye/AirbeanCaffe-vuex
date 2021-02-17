@@ -1,5 +1,7 @@
 <template>
   <div>
+       <router-link to="/OrderDelivery"></router-link>
+       <p>{{total_amt}}{{amtTotal}}</p>
       <h1>Your Order</h1>
        <div v-for ="(k,index) in order" :key=index  class="kaffestyle">
          <div>  
@@ -18,7 +20,7 @@
          </div>
       </div>
     Total: {{sum}} {{priceTotal}}
-    <button>Take My Money</button>
+    <button @click="toStatus">Take My Money</button>
   </div>
 </template>
 
@@ -26,7 +28,8 @@
 export default {
     data(){
         return{
-            priceTotal:0
+            priceTotal:0,
+            amtTotal:0
         }
     },
  computed:{
@@ -39,8 +42,19 @@ export default {
 }, 0);
 
 console.log('Total ', this.priceTotal)
+        },
+        total_amt(){
+this.amtTotal=this.order.reduce(function(prev, cur) {
+          return prev + cur.amount
+}, 0);
         }
+},
+methods:{
+    toStatus(){
+         this.$router.push("OrderDelivery");
+    }
 }
+
 
 }
 </script>
