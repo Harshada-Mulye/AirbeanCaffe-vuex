@@ -1,13 +1,13 @@
 <template>
   <nav>
     <ul>
-      <li>Meny</li>
-      <hr />
+      <li><router-link to="/KaffeMeny">Meny</router-link></li>
+      <li><hr /></li>
       <li><router-link to="/OurCoffee">Vårt Kaffe</router-link></li>
-      <hr />
-      <li>Min profil</li>
-      <hr />
-      <li>Orderstatus</li>
+      <li><hr /></li>
+      <li><router-link to="/Profil">Min Profil</router-link></li>
+      <li><hr /></li>
+      <li><router-link to="/Order">Orderstatus</router-link></li>
     </ul>
   </nav>
 </template>
@@ -28,9 +28,15 @@ ul {
 }
 
 li {
-  color: white;
   font-size: 1.8rem;
   font-family: serif;
+  padding: 3px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  line-height: 120%;
 }
 
 hr {
