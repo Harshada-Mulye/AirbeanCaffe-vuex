@@ -55,6 +55,8 @@ computed:{
     display:flex;
     
     margin-left: 20px;
+    margin-right:20px;
+    justify-content: space-between;
 }
 button{
 color:white;

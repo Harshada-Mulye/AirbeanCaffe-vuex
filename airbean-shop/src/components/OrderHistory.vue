@@ -1,27 +1,37 @@
 <template>
   <div>
-      <h1>Order History</h1>
+      <img src="../assets/profile.png"  />
        <div v-for ="(k,index) in user" :key=index  class="kaffestyle">
          <div>  
-          <h2>
-          {{k.name}} 
-          {{k.email}}
+          <h2 class="name">{{k.name}} </h2>
+        <h2 class="email">  {{k.email}} </h2>
 
-          </h2>
+         
          </div>
+         <h1 class="order">Orderhistorik</h1>
+      
         
   </div>
         
        <div v-for ="(k,index) in hist" :key=index  class="kaffestyle">
-         <div>  
-          <h2>
+         <div class="display">
+           <div>  
+          <h2 class="randnum">
 
-    XAB{{random()}} Total: {{hist[index]}} 
-
-          </h2>
-         </div>
+    XAB{{random()}}  </h2>
+ <p>total ordersumma</p> <p>_ _ _ _ _ _ _  _</p></div> 
+ <div>
+  <p>{{new Date().toLocaleString()}} </p><p>{{hist[index]}}</p> 
+   <p>_ _ _ _ _ _ _  _</p>
+  </div>
+ </div>
+       
         
   </div>
+  <div>
+   <h1 class="spend">Totalt spenderat</h1>
+  <p>{{hist.reduce(sum)}}</p>
+  </div> 
   </div>
 </template>
 
@@ -30,7 +40,9 @@ export default {
     
     data(){
         return{
-        x:0
+        x:0,
+        date:"",
+        priceTotal:0
         }
     },
     computed:{
@@ -42,16 +54,53 @@ export default {
         {
             return this.$store.getters.user;
         }
+        
     },
     methods:{
          random(){
          return Math.floor((Math.random() * 1000000) + 1);
-        }
-    }
- 
+        },
+       sum(total, num) {
+      return total +num;
+}
+
+      
+ }
 }
 </script>
 
-<style>
-
+<style scoped>
+img {
+  width:70px;
+  height:70px;
+}
+.name{
+  font-family: 'PT Serif';
+  font-size: 24px;
+}
+.email{
+  font-family: 'Work Sans';
+  font-size: 14px;
+}
+.order{
+  font-family: 'PT Serif';
+  font-size: 22px;
+}
+.randnum{
+   font-family: 'Work Sans';
+  font-size: 14px;
+}
+p{
+     font-family: 'Work Sans';
+  font-size: 12px;
+}
+.spend{
+    font-family: 'Work Sans';
+  font-size: 14px;
+}
+.display{
+  display:flex;
+  justify-content: space-between;
+  margin:20px;
+}
 </style>

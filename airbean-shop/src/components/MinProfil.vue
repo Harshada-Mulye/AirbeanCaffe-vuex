@@ -1,5 +1,7 @@
 <template>
+ 
   <section class="my-profil-background">
+     <router-link to="/KaffeMeny"></router-link> 
     <img src="../assets/ourcoffeetop.svg" />
     <section class="login">
       <h1>Välkommen till AirBean-familjen!</h1>
@@ -37,6 +39,8 @@ export default {
   methods: {
     onSubmit(profile) {
       this.$store.commit("Add_User", profile);
+       this.$router.push("KaffeMeny");
+
     },
   },
 };
