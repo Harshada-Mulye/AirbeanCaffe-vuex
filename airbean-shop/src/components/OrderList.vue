@@ -80,12 +80,13 @@ methods:{
 
 <style scoped >
 .container{
-    background-image: url("../assets/Group.svg");
-}
+ background-color: #439174;;
+    }
 .kaffestyle{
     display:flex;
     justify-content: space-between;
     margin: 20px;
+    background-color: white;
        
 }
 h2{
