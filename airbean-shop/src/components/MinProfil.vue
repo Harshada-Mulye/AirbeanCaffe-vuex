@@ -1,7 +1,7 @@
 <template>
  
   <section class="my-profil-background">
-     <router-link to="/KaffeMeny"></router-link> 
+     <router-link to="/OrderHist"></router-link> 
     <img src="../assets/ourcoffeetop.svg" />
     <div class="login-container">
       <img src="../assets/myprofilelogo.svg" />
@@ -44,7 +44,7 @@ export default {
   methods: {
     onSubmit(profile) {
       this.$store.commit("Add_User", profile);
-       this.$router.push("KaffeMeny");
+       this.$router.push("OrderHist");
 
     },
   },

@@ -1,5 +1,6 @@
 <template>
   <section>
+    <router-link to="/OrderHist"></router-link> 
     <span>Ordernummer #</span>
     <img src="../assets/orderdelivery.svg" />
     <div>
@@ -7,13 +8,17 @@
       <h1>Din beställning är på väg!</h1>
       <span> minuter</span>
     </div>
-    <button>Ok, cool!</button>
+    <button @click="Goto_hist">Ok, cool!</button>
   </section>
 </template>
 
 <script>
 export default { 
-
+methods:{
+  Goto_hist(){
+       this.$router.push("OrderHist");
+  }
+}
 }
 
 </script>
