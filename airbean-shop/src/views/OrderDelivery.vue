@@ -3,6 +3,7 @@
     <span>Ordernummer #</span>
     <img src="../assets/orderdelivery.svg" />
     <div>
+      {{order.id}}
       <h1>Din beställning är på väg!</h1>
       <span> minuter</span>
     </div>
@@ -11,7 +12,14 @@
 </template>
 
 <script>
-export default {};
+export default { 
+  computed:{
+        order(){
+             return this.$store.getters.order;
+        },
+        }
+}
+
 </script>
 
 <style scoped>

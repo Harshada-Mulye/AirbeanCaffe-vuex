@@ -16,7 +16,7 @@
          <div>  
           <h2>
 
-      {{x}}   Total: {{hist[index]}} 
+    XAB{{random()}} Total: {{hist[index]}} 
 
           </h2>
          </div>
@@ -27,8 +27,11 @@
 
 <script>
 export default {
+    
     data(){
-        x=0;
+        return{
+        x:0
+        }
     },
     computed:{
       hist()
@@ -41,11 +44,11 @@ export default {
         }
     },
     methods:{
-        random(){
-             this.x = Math.floor((Math.random() * 10) + 1);
+         random(){
+         return Math.floor((Math.random() * 1000000) + 1);
         }
     }
-
+ 
 }
 </script>
 
