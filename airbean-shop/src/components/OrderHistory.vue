@@ -15,7 +15,8 @@
        <div v-for ="(k,index) in hist" :key=index  class="kaffestyle">
          <div>  
           <h2>
-          {{hist[index]}} 
+
+      {{x}}   Total: {{hist[index]}} 
 
           </h2>
          </div>
@@ -26,6 +27,9 @@
 
 <script>
 export default {
+    data(){
+        x=0;
+    },
     computed:{
       hist()
         {
@@ -34,6 +38,11 @@ export default {
         user()
         {
             return this.$store.getters.user;
+        }
+    },
+    methods:{
+        random(){
+             this.x = Math.floor((Math.random() * 10) + 1);
         }
     }
 

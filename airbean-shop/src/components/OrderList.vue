@@ -57,6 +57,7 @@ this.amtTotal=this.order.reduce(function(prev, cur) {
 },
 methods:{
     toStatus(){
+         this.$store.getters.order.splice(0,this.$store.getters.order.length)
          this.$store.commit("Add_Hist",this.priceTotal)
 
   if(this.$store.getters.user.length>0)
