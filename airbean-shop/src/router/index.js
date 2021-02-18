@@ -41,6 +41,18 @@ const routes = [
     name: 'NavDropDown',
 
     component: () => import(/* webpackChunkName: "about" */ '../views/NavDropDown.vue')
+  },
+  {
+    path: '/Profil',
+    name: 'Profil',
+
+    component: () => import(/* webpackChunkName: "about" */ '../views/Profil.vue')
+  },
+  {
+    path: '/OrderHist',
+    name: 'OrderHist',
+
+    component: () => import(/* webpackChunkName: "about" */ '../views/OrderHist.vue')
   }
 ]
 

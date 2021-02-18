@@ -1,6 +1,7 @@
 <template>
   <div class="container">
        <router-link to="/OrderDelivery"></router-link>
+         <router-link to="/Profil"></router-link>
        <div class="total_amt">
        <p class="p_amt">{{total_amt}}{{amtTotal}}</p>
        </div>
@@ -56,11 +57,23 @@ this.amtTotal=this.order.reduce(function(prev, cur) {
 },
 methods:{
     toStatus(){
+         this.$store.commit("Add_Hist",this.priceTotal)
+
+  if(this.$store.getters.user.length>0)
+  {
+       
+       
+        
          this.$router.push("OrderDelivery");
     }
+    else{
+        this.$router.push("Profil");
+    }
+
 }
 
 
+}
 }
 </script>
 

@@ -7,6 +7,8 @@
       <router-link to="/KaffeMeny">KaffeMeny</router-link>|
       <router-link to="/Order">Your Order</router-link> |
       <router-link to="/OrderDelivery">Delivery</router-link>
+       <router-link to="/Profil">Min Profil</router-link>
+        <router-link to="/OrderHist">Min History</router-link>
     </div>
     <router-view />
   </div>

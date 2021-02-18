@@ -49,7 +49,9 @@ export default new Vuex.Store({
                 amount:1
                 }
     ],
-    Order:[]
+    Order:[],
+    User:[],
+    History:[],
     
   },
   getters:{
@@ -58,7 +60,13 @@ export default new Vuex.Store({
     },
     order:state=>{
       return state.Order;
-      }
+      },
+      user:state=>{
+        return state.User;
+        },
+        history:state=>{
+          return state.History;
+        }
   },
   mutations: {
     Add_Order(state,payload){
@@ -70,6 +78,12 @@ export default new Vuex.Store({
       
       state.Order.push(payload)
         }
+    },
+    Add_User(state,k){
+      state.User.push(k)
+    },
+    Add_Hist(state,k){
+      state.History.push(k)
     }
   },
   actions: {
