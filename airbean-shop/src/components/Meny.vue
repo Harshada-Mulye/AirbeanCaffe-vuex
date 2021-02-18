@@ -1,6 +1,8 @@
 <template>
   <div>
+
        <router-link to="/Order"></router-link> 
+        <img src="../assets/ourcoffeetop.svg" />
         <button class="clickme" @click="toOrder"><img src="../assets/bag.svg" /></button>
       <h1>Meny </h1>
     

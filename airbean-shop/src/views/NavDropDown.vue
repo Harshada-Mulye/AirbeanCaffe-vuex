@@ -5,9 +5,9 @@
       <li><hr /></li>
       <li><router-link to="/OurCoffee">Vårt Kaffe</router-link></li>
       <li><hr /></li>
-      <li><router-link to="/Profil">Min Profil</router-link></li>
+      <li><router-link to="/OrderHist">Order History</router-link></li>
       <li><hr /></li>
-      <li><router-link to="/Order">Orderstatus</router-link></li>
+      <li><router-link to="/OrderDelivery">Orderstatus</router-link></li>
     </ul>
   </nav>
 </template>

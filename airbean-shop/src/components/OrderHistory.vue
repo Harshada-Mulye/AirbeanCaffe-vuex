@@ -1,6 +1,7 @@
 <template>
-  <div>
-      <img src="../assets/profile.png"  />
+  <div class="my-profile-history">
+     <img src="../assets/ourcoffeetop.svg" />
+      <img src="../assets/profile.png"   class="profile"/>
        <div v-for ="(k,index) in user" :key=index  class="kaffestyle">
          <div>  
           <h2 class="name">{{k.name}} </h2>
@@ -38,13 +39,7 @@
 <script>
 export default {
     
-    data(){
-        return{
-        x:0,
-        date:"",
-        priceTotal:0
-        }
-    },
+   
     computed:{
       hist()
         {
@@ -70,7 +65,11 @@ export default {
 </script>
 
 <style scoped>
-img {
+.my-profile-history{
+  background-color: rgb(53, 48, 48);
+  color:white;
+}
+.profile {
   width:70px;
   height:70px;
 }
