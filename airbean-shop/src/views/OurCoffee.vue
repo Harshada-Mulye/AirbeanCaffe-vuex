@@ -1,5 +1,5 @@
 <template>
-  <section class="about">
+  <section>
     <img src="../assets/ourcoffeetop.svg" />
     <div class="container">
       <h1>Vårt kaffe</h1>

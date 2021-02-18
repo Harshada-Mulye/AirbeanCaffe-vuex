@@ -1,11 +1,9 @@
 <template>
-  <div class="home">
-    <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <section class="home" @click="navigateToNav">
     <img class="left" src="../assets/homeleft.svg" />
     <img src="../assets/homelogo.svg" />
     <img class="right" src="../assets/homeright.svg" />
-  </div>
+  </section>
 </template>
 
 <script>
@@ -17,6 +15,11 @@ export default {
   // components: {
   //   HelloWorld
   // }
+  methods: {
+    navigateToNav() {
+      this.$router.push("/NavDropDown");
+    },
+  },
 };
 </script>
 

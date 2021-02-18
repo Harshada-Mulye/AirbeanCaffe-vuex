@@ -3,12 +3,12 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/OurCoffee">Vårt Kaffe</router-link>|
-  <router-link to="/NavDropDown">Nav</router-link>|
+      <router-link to="/NavDropDown">Nav</router-link>|
       <router-link to="/KaffeMeny">KaffeMeny</router-link>|
       <router-link to="/Order">Your Order</router-link> |
       <router-link to="/OrderDelivery">Delivery</router-link>
-       <router-link to="/Profil">Min Profil</router-link>
-        <router-link to="/OrderHist">Min History</router-link>
+      <router-link to="/Profil">Min Profil</router-link>
+      <router-link to="/OrderHist">Min History</router-link>
     </div>
     <router-view />
   </div>
@@ -21,9 +21,10 @@
   background-color: #f3e4e1;
   color: #2f2926;
   width: 375px;
-  /* height: 839px; */
-  display: grid;
-  justify-content: center;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 #nav {
