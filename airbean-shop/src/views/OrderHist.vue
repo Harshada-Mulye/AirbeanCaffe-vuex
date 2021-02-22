@@ -1,18 +1,20 @@
 <template>
   <div>
-      <OrderHistory/>
+    <OrderHistory />
   </div>
 </template>
 
 <script>
-import OrderHistory from '@/components/OrderHistory.vue'
+import OrderHistory from "@/components/OrderHistory.vue";
 export default {
-components:{
-    OrderHistory
-}
-}
+  components: {
+    OrderHistory,
+  },
+};
 </script>
 
-<style>
-
+<style scoped>
+div {
+  height: 100%;
+}
 </style>
